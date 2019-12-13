@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>Books</title>
+</head>
+
+<body>
+	<h2>Your Books</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody data-bind="foreach: books">
+			<tr>
+				<td><input data-bind="value: title" /></td>
+				<td><input data-bind="value: author" /></td>
+				<td><a href="#" data-bind="click: $root.removeBook">Remove</a></td>
+			</tr>
+		</tbody>
+	</table>
+
+<!-- 	<button data-bind="click: addBook">Add another book</button>
+
+	<h2>-->
+		Your #books (<span data-bind="text: books().length"></span>)
+	</h2> 
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-debug.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+	<script src="script.js"></script> 
+</body>
+</html>
